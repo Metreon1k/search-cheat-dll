@@ -9,15 +9,12 @@ Clear-Host
 Write-Host ("=" * 60) -ForegroundColor Blue
 Write-Host "      SCANN-CHEAT SYSTEM v1.0 | Powered by Metreon1k"
 Write-Host ("=" * 60) -ForegroundColor Blue
-Write-Host "[*] Target Signature: " -NoNewline; Write-Host $targetSignature -ForegroundColor Yellow
-Write-Host "[*] Search Path:      " -NoNewline; Write-Host $searchRoot -ForegroundColor Yellow
-Write-Host "[*] Status:           " -NoNewline; Write-Host "Scanning files..." -ForegroundColor Green
+Write-Host "[*] Status: " -NoNewline; Write-Host "Scanning files..." -ForegroundColor Green
 Write-Host ""
 
 $foundList = @()
 $filesScanned = 0
 $startTime = Get-Date
-
 
 try {
     $files = Get-ChildItem -Path $searchRoot -Include *.dll, *.exe, *.jar -Recurse -ErrorAction SilentlyContinue | 
@@ -25,7 +22,6 @@ try {
 
     foreach ($file in $files) {
         $filesScanned++
-        
         if ($filesScanned % 100 -eq 0) {
             Write-Host ("`r[>] Scanned: $filesScanned files...") -NoNewline
         }
@@ -41,8 +37,8 @@ try {
         }
     }
 }
-catch [System.Management.Automation.BreakException] {
-    Write-Host "`n[!] Scanning aborted by user" -ForegroundColor Red
+catch {
+    Write-Host "`n[!] Scanning aborted or error occurred" -ForegroundColor Red
 }
 
 $endTime = Get-Date
