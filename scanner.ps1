@@ -6,9 +6,9 @@ $searchRoot = "C:\"
 
 Clear-Host
 
-Write-Host ("=" * 60) -ForegroundColor Blue
+Write-Host ("=" * 80) -ForegroundColor Blue
 Write-Host "      SCANN-CHEAT SYSTEM v1.0 | Powered by github.com/Metreon1k"
-Write-Host ("=" * 60) -ForegroundColor Blue
+Write-Host ("=" * 80) -ForegroundColor Blue
 Write-Host "[*] Status: " -NoNewline; Write-Host "Scanning files..." -ForegroundColor Green
 Write-Host ""
 
