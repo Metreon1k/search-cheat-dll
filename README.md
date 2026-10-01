@@ -6,4 +6,4 @@
 Запустите **PowerShell от имени администратора** и вставьте:
 
 ```powershell
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass; iwr -useb '[https://raw.githubusercontent.com/Metreon1k/search-cheat-dll/main/scanner.ps1](https://raw.githubusercontent.com/Metreon1k/search-cheat-dll/main/scanner.ps1)' | iex
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass; iwr -useb 'https://raw.githubusercontent.com/Metreon1k/search-cheat-dll/main/scanner.ps1' | iex
